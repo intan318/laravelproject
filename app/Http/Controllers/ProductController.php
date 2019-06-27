@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\mhs;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
@@ -38,7 +38,11 @@ class ProductController extends Controller
     {
         $mhs = $this->validate(request(), [
             'nama' => 'required',
-            'nim' => 'required|numeric'
+            'nim' => 'required|numeric',
+            'semester' => 'required',
+            'no_hp' => 'required',
+            'email' => 'required',
+            'alamat' => 'required'
         ]);
 
         mhs::create($mhs);
@@ -79,10 +83,21 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $mhs = mhs::find($id);
-            $this->validate(request(), ['nama'=>'required', 'nim' => 'required|numeric']);
+            $this->validate(request(), 
+            ['nama'=>'required', 
+             'nim' => 'required|numeric',
+             'semester' => 'required',
+             'no_hp' => 'required',
+             'email' => 'required', 
+             'alamat'=>'required'
+            ]);
         $mhs->nama = $request->get('nama');
         $mhs->nim = $request->get('nim');
-         $mhs->save();
+        $mhs->semester = $request->get('semester');
+        $mhs->no_hp= $request->get('no_hp');
+        $mhs->email= $request->get('email');
+        $mhs->alamat= $request->get('alamat');
+        $mhs->save();   
            return redirect('mhs')->with('success', 'Mahasiswa telah diupdate');
     }
 
@@ -96,6 +111,8 @@ class ProductController extends Controller
     {
         $mhs = mhs::find($id);      
         $mhs->delete();      
-          return redirect('mhs')->with('success','Data mahasiswa telah dihapus');    }
+          return redirect('mhs')->with('success','Data mahasiswa telah dihapus');    
+        
+    }
 
 }

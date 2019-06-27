@@ -18,7 +18,8 @@ class CreateMhsTable extends Migration
             $table->string('nim');
             $table->string('nama');
             $table->string('alamat');
-            $table->integer('no_tlp');
+            $table->string('semester');
+            $table->integer('no_hp');
             $table->string('email')->unique();
             $table->timestamps();
         });

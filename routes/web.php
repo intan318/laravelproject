@@ -20,3 +20,6 @@ Route::get('/', function () {
 Route::get('mhs/create', function () {
     return view('mhs/create');
 });
+
+Route::get('/admin', 'AdminController@index');
+
