@@ -17,6 +17,7 @@ class CreateMhsTable extends Migration
             $table->increments('id');
             $table->string('nim');
             $table->string('nama');
+            $table->string('nilai');
             $table->string('alamat');
             $table->string('semester');
             $table->integer('no_hp');

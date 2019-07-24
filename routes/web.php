@@ -11,11 +11,12 @@
 |
 */
 
-Route::resource('mhs', 'ProductController');
+Route::resource('/', 'ProductController');
+Route::resource('mhs', 'ProductController' );
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('mhs/create', function () {
     return view('mhs/create');

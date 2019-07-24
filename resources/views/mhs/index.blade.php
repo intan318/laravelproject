@@ -91,8 +91,11 @@ desired effect
       <div class="container-fluid">
         @yield('content')
   </div>
-   <body>
+
+      @include('admin/dashboard')
+  <body>
        
+
         <div class="container">
         <br />
         @if (\Session::has('success'))
@@ -108,6 +111,7 @@ desired effect
                 <th>No</th>
                 <th>NIM</th>
                 <th>Nama</th>
+                <th>Nilai</th>
                 <th>Semester</th>
                 <th>No HP</th>
                 <th>E-Mail</th>
@@ -120,6 +124,7 @@ desired effect
             <td>{{$mhs['id']}}</td>
             <td>{{$mhs['nim']}}</td>
             <td>{{$mhs['nama']}}</td>
+            <td>{{$mhs['nilai']}}</td>
             <td>{{$mhs['semester']}}</td>
             <td>{{$mhs['no_hp']}}</td>
             <td>{{$mhs['email']}}</td>
@@ -227,7 +232,7 @@ desired effect
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
-
+      
 <!-- jQuery 3 -->
 <script src="{{asset('lte/bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->

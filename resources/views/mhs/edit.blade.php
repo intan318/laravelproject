@@ -118,10 +118,18 @@ desired effect
                     </div>
                 </div>
             
+                <div class="row">
+                <div class="col-md-4"></div>
+                    <div class="form-group col-md-4">
+                        <label for="nilai">Nilai: </label>
+                        <input type="text" class="form-control" name="nilai" value="{{$mhs->nilai}}">
+                    </div>
+                </div>    
+
             <div class="row">
                 <div class="col-md-4"></div>
                     <div class="form-group col-md-4">
-                        <label for="nim">Semester: </label>
+                        <label for="semester">Semester: </label>
                         <input type="text" class="form-control" name="semester" value="{{$mhs->semester}}">
                     </div>
                 </div>

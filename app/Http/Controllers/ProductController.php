@@ -39,6 +39,7 @@ class ProductController extends Controller
         $mhs = $this->validate(request(), [
             'nama' => 'required',
             'nim' => 'required|numeric',
+            'nilai' => 'required|numeric',
             'semester' => 'required',
             'no_hp' => 'required',
             'email' => 'required',
@@ -86,6 +87,7 @@ class ProductController extends Controller
             $this->validate(request(), 
             ['nama'=>'required', 
              'nim' => 'required|numeric',
+             'nilai' =>'required|numeric',
              'semester' => 'required',
              'no_hp' => 'required',
              'email' => 'required', 
@@ -93,10 +95,12 @@ class ProductController extends Controller
             ]);
         $mhs->nama = $request->get('nama');
         $mhs->nim = $request->get('nim');
+        $mhs->nilai=$request->get('nilai');
         $mhs->semester = $request->get('semester');
         $mhs->no_hp= $request->get('no_hp');
         $mhs->email= $request->get('email');
         $mhs->alamat= $request->get('alamat');
+      
         $mhs->save();   
            return redirect('mhs')->with('success', 'Mahasiswa telah diupdate');
     }

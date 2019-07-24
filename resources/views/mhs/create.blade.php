@@ -107,7 +107,15 @@ desired effect
         <div class="row"> 
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-            <label for="nim">Semester:</label>
+            <label for="nilai">Nilai:</label>
+        <input type="text" class="form-control" name="nilai">
+        </div>
+        </div>
+        
+        <div class="row"> 
+            <div class="col-md-4"></div>
+            <div class="form-group col-md-4">
+            <label for="semester">Semester:</label>
         <input type="text" class="form-control" name="semester">
         </div>
         </div>
@@ -123,7 +131,7 @@ desired effect
         <div class="row"> 
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-            <label for="nim">E-mail:</label>
+            <label for="email">E-mail:</label>
         <input type="text" class="form-control" name="email">
         </div>
         </div>
@@ -131,7 +139,7 @@ desired effect
         <div class="row"> 
             <div class="col-md-4"></div>
             <div class="form-group col-md-4">
-            <label for="nim">Alamat:</label>
+            <label for="alamat">Alamat:</label>
         <input type="text" class="form-control" name="alamat">
         </div>
         </div>
